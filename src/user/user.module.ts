@@ -11,7 +11,7 @@ import {User, UserSchema} from "./user.entity";
                 name: User.name,
                 schema: UserSchema,
             }
-        ])
+        ]),
     ],
     controllers: [UserController],
     providers: [UserService],

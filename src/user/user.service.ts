@@ -31,4 +31,8 @@ export class UserService {
         if(!user) throw new NotFoundException(`User with email ${email} not found`);
         return user;
     }
+
+    async getAll(email:string) {
+        return this.userModel.find().exec();
+    }
 }

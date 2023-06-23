@@ -16,4 +16,9 @@ export class UserController {
     async getUserByEmail(payload) {
         return await this.userService.getUserByEmail(payload.email);
     }
+
+    @MessagePattern({cmd: 'AUTH_LIST'})
+    async getAll(payload) {
+        return await this.userService.getAll(payload.email);
+    }
 }
